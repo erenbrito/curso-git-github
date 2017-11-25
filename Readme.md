@@ -1,236 +1,182 @@
-#Git-course
+# Git-course
 
-Este é um repositorio teste para ensinar como o git funciona.
+Este é um repositório para guardar minhas anotações do curso de Git e Github do Willian Justen.
 
-Saiba mais no link: [willianjusten.com.br](http://willianjusten.com.br)
+---
 
-Gostou do curso? Quer mais? Ajude com uma doação, até um café é válido =)
+## Comandos
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/websrc?cmd=_s-xclick&hosted_button_id=UTMFZUHX6EUGE)
-
-Outros cursos em : [Willian Justen Cursos](http://willianjusten.teachable.com)
-
--------------------------
-Comands
-
-#Configurando nome de usuário, email e editor no git
-
+- **Como configurar nome de usuário, email e editor no git**
+```
 git config --global user.name "Mariana Brito"
-
 git config --global user.email "mariana.bsouza@hotmail.com"
-
 git config --global core.editor sub
+```
 
-
-#Mostrando user ou email
-
-git config user.user
-
+- **Mostrando o nome e email configurados**
+```
 git config user.name
+git config user.email
+```
 
-
-#Limpar tela
-
-Digite clear e aperte enter
-
-
-#Lista de várias informações do meu git
-
+- **Mostra todas as informações configuradas do meu git**
+```
 git config --list
+```
 
+- **Criando pasta dentro do terminal**
+```
+mkdir nomeDaPastaDesejada
+```
 
-#Criando páginas/pasta dentro do terminal
+- **Entrando na pasta**
+```
+cd nomeDaPastaDesejada
+```
 
-mkdir + nome da pasta
-
-
-#Entrando na pasta
-
-cd + nome da pasta
-
-
-#Saindo da pasta
-
+- **Saindo da pasta**
+```
 cd ..
+```
 
-#Iniciando repositório
-
+- **Iniciando repositório git dentro da sua pasta**
+```
 git init
+```
 
-
-#Lista de arquivos
-
+- **Mostra os arquivos da pasta**
+```
 ls
+```
 
-
-#Como está o repositório no momento
-
+- **Como está o repositório no momento**
+```
 git status
-
-
-#Atalho Sublime
-
-subl
-
-
-#Para commitar
-
-git commit -m "--"
-(-m uma mensagem do que fez)
-
-git commit -am “—“
-(já faz o add de tudo)
-
-#Lugar atual
-
-master ou outra branch
-
-*Para commitar precisa de add .
-
-
-#Histórico de coisas feitas
-
-git log
-git log --decorate = de qual branch para qual branch, qual tag gerada
-git log --author="Mariana" = Filtrar por author
-git shortlog = ordem alfabética dos ocntrinuintes
-git log --graph = mostra o que acontece com o branch e suas versões
-
-
-#Diff
-
-git diff = mostra as atualizações feitas antes de commitar
-
-git diff --name-only = dizer apenas o nome do arquivo a ser modificado
-
-git commit -am = pode ser feito quando já mexeu nesse arquivo, quando já commitou antes
-
-git show = mostra as atualizações feitas
-
-
-#Resetar erros
-
-git checkout Readme.md(ou .) = vai retornar o arquivo antes da edição
-
-git reset HEAD = quero remover o stage(etapa) do meu arquivo do local que estou
-
-git reset --soft = desfaz o commit, mas as alterações continuam(no git add{verde})
-
-git reset --mixed = defaz o commit e o git add(vermelho)
-
-git reset --hard = paga tudo, commit e alterações
-
-*sempre tem que escolher o penúltimo commit
-
-
-#Criando repositório remoto(GITHUB)
-
-git remote = diz que já existe repositório origin
-
-git remote -V = mais informações, endereço dele
-
-git push = ele envia os arquivos, modificações para o repositório determinando
-
-git push -u origin master = envia para a o repositório determinado
-(-u = para trackear para não ter que digitar tudo novamente)
-(origin = vai para)
-(master = vem)
-
-
-#Clonando repositórios remotos
-
-copiar o endereço SSH ou https lá do github
-digitar git clone e colar o endreço e e renomear o arquivo com outro nome e colocar clone
-
-
-#Ramificação(Branch)
-
-é um ponteiro móvel que leva a um commit
-
-
-#Criando um Branch
-
-git checkout -b testing
-(-b = dizendo que está criando uma branch)
-(testing = nome da branch)
-
-git branch = branchs existentes e qual branch está no momento
-
-#Movendo e deletando branchs
-
-git checkout = git checkout testing ou master = vai pral qual branch quer
-(testing e master = nome das branchs)
-
-#Apagando
-
-git branch -D testing
-
-
-#Entendendo o merge e rebase
-
-serve para unir branchs
-
-#Merge
-uni todas branchs em uma só na ordem certa
-
-#Rebase
-uni todas branchs na ordem certa quando um contribuinte está trabalhando e enviando de outro local
-
-
-#Como sair do vim
-
-aperta a tecla "esc" e digita ": wq"
-
-
-#Stash
-
-git stash = guardar modificações que ainda não foram commitadas numa pasta/arquivo que eu possa chamar depois quando necessário
-
-fica em estado de WIP
-
-#Trazendo de volta o arquivo
-
-git stash apply
-
-git stash list = mostra a lista de todos os stashs que estou fazendo
-
-git stash clear = limpa tudo e todas modificações e stash guardados
-
-#Atalhos
-
-git status = git s = git config --global alias.s status
-
-
-#Versionando com Tags
-
-git tag -a q.0.0 -m "Readme.md"
-(1.0.0 = versão)
-(-a = com algum dado)
-
-#Subindo
-
-git push origin master --tags
-
-#Listando todas as tags
-
-git tag
-
-#Revertendo
-
-git revert
-(git revert + número do commit)
-(mas mantém o histórico do commit)
-
-
-#Apagando tags e branches remotos
-
--tags
-git tag -d 1.0.1
-depois precisa subir
-git push origin master —tags(mas ainda não apagou no repositório remoto)
-apagando no remoto
+```
+
+- **Para commitar**
+```
+git add nomeDoSeuArquivo.html
+git commit -m "Adicionei o arquivo e fiz o commit"
+```
+ou
+```
+git commit -am "Adicionei o arquivo e fiz o commit tudo em um comando só"
+```
+
+- **Histórico de alterações feitas**
+
+```
+git log #Mostra todos os logs
+git log --decorate #Histórico mais detalhado
+git log --author="Mariana" #Filtrar por autor
+git shortlog #Ordem alfabética dos contribuintes
+git log --graph #Mostra o que acontece com o branch e suas versões
+```
+
+- **Vendo as alteracões antes de commitar**
+```
+git diff #Mostra as atualizações feitas antes de commitar
+git diff --name-only #Dizer apenas o nome do arquivo a ser modificado
+git commit -am #Pode ser feito quando já mexeu nesse arquivo, quando já commitou antes
+git show #Mostra as atualizações feitas
+```
+
+- **Desfazendo alterações**
+```
+git checkout Readme.md(ou .) #Vai retornar o arquivo antes da edição
+git reset HEAD #Quero remover o stage(etapa) do meu arquivo do local que estou
+git reset --soft #Desfaz o commit, mas as alterações continuam(no git add{verde})
+git reset --mixed #Desfaz o commit e o git add(vermelho)
+git reset --hard #Apaga tudo, commit e alterações
+```
+**Sempre tem que escolher o penúltimo commit*
+
+- **Enviando o seu projeto para um repositório remoto (GITHUB)**
+```
+git remote #Diz se já existe algum repositório origin
+git remote -V #Mais informações, endereço dele
+git push #Envia os arquivos, modificações para o repositório determinando
+git push -u origin master #Envia para a o repositório origin na branch master
+```
+
+- **Clonando repositórios remotos**
+
+Copie o endereço SSH ou https do repositório (disponível no github) e no terminal digite:
+```
+git clone https://github.com/nomeDoUsuario/nomeDoRepositorio.git nomeDaPastaDesejada
+```
+
+- **Criando Branchs**
+
+É um ponteiro móvel que leva a um commit
+```
+git checkout -b nomeDaBranchDesejada #-b é o comando responsável por criar uma branch e mudar pra ela
+git branch #Mostra todas as branchs exixtentes e qual branch está no momento
+```
+
+- **Trocando de branch**
+```
+git checkout master #Vai para a branch master
+git checkout nomeDaBranchDesejada #Vai para a branch "nomeDaBranchDesejada" apenas se ela existir
+```
+
+- **Deletando uma branch**
+```
+git branch -D nomeDaBranchDesejada
+```
+
+- **Entendendo o merge e rebase**
+
+Os comandos **merge** e **rebase** servem para unir branchs, mas cada um funciona de uma forma diferente:
+
+ > **Merge**
+Une todas branchs em uma só na ordem certa.
+
+> **Rebase**
+Une todas branchs na ordem certa quando um contribuinte está trabalhando e enviando de outro local.
+
+
+- **Guardando pra depois**
+Quando você tem uma modificação que ainda não pode ser commitada e quer guardar para chamar depois quando necessário:
+```
+git stash #Fica em estado de WIP - Work In Progress
+git stash list #Lista todos os arquivos em stashs
+git stash apply #Traz um arquivo que está no stash de volta
+git stash clear #Limpa todas as modificações guardadas no stash
+```
+
+- **Versionando com Tags**
+Faz uma nova versão do seu projeto relacionando com os últimos commits
+```
+git tag #Mostra todas as tags
+git tag -a 1.0.0 -m "Versão 1.0.0" #Cria uma nova tag onde -a especifica o numero da versão e -m especifica a mensagem
+git push origin master --tags #envia a nova tag para o repositorio remoto
+```
+
+- **Revertendo um commit**
+Desfaz as alterações que foram feitas em um commit, mas mantém ele no histórico
+```
+git revert 123abc #onde 123abc 'é o número do commit
+```
+
+- **Apagando tags e branches do repositório remoto**
+```
+git tag -d 1.0.0
+git push origin master —tags
 git push origin :1.0.0
+```
+```
+git branch -d nomeDaBranchDesejada
+git push origin :nomeDaBranchDesejada
+```
 
-branch
-mesma forma que a tag
-git push origin :test
+- **Criando atalhos**
+```
+git config --global alias.s status #Cria um atalho para o git status
+git s #agora podemos digitar apenas git s em vez de git status
+```
+
+- **Dicas extras**
+ - Para limpar a tela digite clear a aperta enter
+ - Para sair do VIM aperta a tecla esc, digita ":wq" e aperta enter
