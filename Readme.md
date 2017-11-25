@@ -180,3 +180,4 @@ git s #agora podemos digitar apenas git s em vez de git status
 - **Dicas extras**
  - Para limpar a tela digite clear a aperta enter
  - Para sair do VIM aperta a tecla esc, digita ":wq" e aperta enter
+ - Para ver o conteúdo de um arquivo diretamente pelo terminal digite: cat nomeDoArquivo
