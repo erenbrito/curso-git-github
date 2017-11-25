@@ -1,4 +1,4 @@
-# Git-course
+# Curso Git e Github
 
 Este é um repositório para guardar minhas anotações do curso de Git e Github do Willian Justen.
 
